@@ -1,0 +1,28 @@
+void 文件加密0()
+{
+    /*
+            int a = 10;
+            int b = 20;
+
+            a = a^b;
+            b = a^b;
+            a = a^b;
+
+            printf("%d\n", a);
+            printf("%d\n", b);
+    */
+    FILE * f1 = fopen("源文件", "rb");
+    FILE * f2 = fopen("加密文件", "wb");
+    if (!f1 || !f2)
+    {
+        perror("文件加密失败\n");
+    }
+    char ch = { 0 };
+    while ((ch = fgetc(f1)) != EOF)
+    {
+        fputc(ch ^ KEY, f2);
+    }
+
+    fclose(f1);
+    fclose(f2);
+}
