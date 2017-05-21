@@ -15,10 +15,22 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="code.c">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="define与typedef.c">
+    <ClInclude Include="resource.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="10C综合.rc">
+      <Filter>资源文件</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Resources\earth.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="staticfun.c">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="二维数组.c">
@@ -27,13 +39,28 @@
     <ClCompile Include="二维数组与内存分配.c">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="结构体.c">
+    <ClCompile Include="一维数组.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="函数指针.c">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="数组行列转换.c">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="一维数组.c">
+    <ClCompile Include="结构体.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="预处理.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="define与typedef.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="code.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="动态库引用.c">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

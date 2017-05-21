@@ -115,7 +115,6 @@
     <ClCompile Include="02动态链表.c" />
     <ClCompile Include="02动态链表2.c" />
     <ClCompile Include="03链表的基本操作.c" />
-    <ClCompile Include="函数指针.c" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -117,37 +117,6 @@ void 优先级()
     printf("%d\n", 1 || 0);
 }
 
-//19 . C语言编程实现 strcmp 函数，不使用库函数。
-int 字符串比较(char * a, char *b)
-{
-    int alen = 0;
-    int blen = 0;
-    while (*a++ != '\0')
-    {
-        alen++;
-    }
-    while (*b++ != '\0')
-    {
-        blen++;
-    }
-    int max = alen > blen ? alen : blen;
-    for (int i = 0; i < max; i++)
-    {
-        if (a[i] > b[i])
-        {
-            return 1;
-        }
-        else if (a[i] == b[i])
-        {
-            return 0;
-        }
-        else
-        {
-            return -1;
-        }
-    }
-}
-
 //20 . 循环输入字母，并将每个字母逐行保存到 C:\code\test.txt 文件里，输入其他则退出循环。
 void InputWorldDemo()
 {
@@ -172,17 +141,6 @@ void InputWorldDemo()
             exit(0);
         }
     }
-}
-
-//21 . C语言编程实现strlen 函数，不使用库函数
-int 字符串长度(char * a)
-{
-    int len = 0;
-    while (*a++ != '\0')
-    {
-        len++;
-    }
-    return len;
 }
 
 //22 . C语言编程实现文件拷贝.即使用C语言标准库函数，将test.avi 的内容拷贝到test1.avi 中。
@@ -373,48 +331,6 @@ void DemoG()
     int x = 10;
     x += 3 + x % (3);
     printf("%d\n\n", x);
-}
-void DemoH()
-{
-    int i, j = 10, x[] = { 1,3,5,7,9,11,13,15 };
-    for (i = 5; i >= 1; --i)
-    {
-        j += x[i];
-    }
-    printf("%d\n\n", j);
-
-    /*
-    a>b  返回1
-    a=b  返回0
-    a<b  返回-1
-    */
-    char a[] = { "12345\06789" }; //12345789
-    char b[] = { "123456789   " }; //123456789
-    //char b[] = { "12345\06789" }; //12345789
-    //char b[] = { "22345\06789" }; //12345789
-
-    //char c[] = { 'a','b','\0','c' ,'\0'};
-    printf("%s\n", a);
-    //printf("%d\n", strlen(a));
-
-    //printf("%s\n", b);
-    //printf("%d\n", strlen(b));
-
-    //printf("%s\n", c);
-    //printf("%d\n", strlen(c));
-    字符串比较(a, b);
-    char c1[] = "A";
-    char c2[] = "a";
-    int i1 = strcmp(c1, c2);
-    printf("[%d]\n", i1);
-    int i2 = 字符串比较(c1, c2);
-    printf("[%d]\n", i1);
-
-    //char c3[] = "12345\06789";
-    char c3[] = "12345   6789";
-    int i3 = 字符串长度(c3);
-    printf("[%d]\n", i3);
-    system("pause");
 }
 
 void GetTimeDemo()

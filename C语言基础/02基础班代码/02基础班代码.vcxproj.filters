@@ -33,9 +33,6 @@
     <ClCompile Include="二维数组行列.c">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="IfElse.c">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="交换两个数.c">
       <Filter>源文件</Filter>
     </ClCompile>
@@ -73,6 +70,9 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="scanf格式化输入.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ifelse.c">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

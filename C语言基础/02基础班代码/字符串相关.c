@@ -200,3 +200,133 @@ void CharArrSizeLen()
     printf("%s\n", d4);
     printf("%d\t%d\n\n", sizeof(d4), strlen(d4));
 }
+
+//19 . C语言编程实现 strcmp 函数，不使用库函数。
+int StringCompare(char * a, char *b)
+{
+    int alen = 0;
+    int blen = 0;
+    while (*a++ != '\0')
+    {
+        alen++;
+    }
+    while (*b++ != '\0')
+    {
+        blen++;
+    }
+    int max = alen > blen ? alen : blen;
+    for (int i = 0; i < max; i++)
+    {
+        if (a[i] > b[i])
+        {
+            return 1;
+        }
+        else if (a[i] == b[i])
+        {
+            return 0;
+        }
+        else
+        {
+            return -1;
+        }
+    }
+}
+void 字符串()
+{
+    int i, j = 10, x[] = { 1,3,5,7,9,11,13,15 };
+    for (i = 5; i >= 1; --i)
+    {
+        j += x[i];
+    }
+    printf("%d\n\n", j);
+
+    /*
+    a>b  返回1
+    a=b  返回0
+    a<b  返回-1
+    */
+    char a[] = { "12345\06789" }; //12345789
+    char b[] = { "123456789   " }; //123456789
+//char b[] = { "12345\06789" }; //12345789
+//char b[] = { "22345\06789" }; //12345789
+
+//char c[] = { 'a','b','\0','c' ,'\0'};
+    printf("%s\n", a);
+    //printf("%d\n", strlen(a));
+
+    //printf("%s\n", b);
+    //printf("%d\n", strlen(b));
+
+    //printf("%s\n", c);
+    //printf("%d\n", strlen(c));
+    StringCompare(a, b);
+    char c1[] = "A";
+    char c2[] = "a";
+    int i1 = strcmp(c1, c2);
+    printf("[%d]\n", i1);
+    int i2 = StringCompare(c1, c2);
+    printf("[%d]\n", i1);
+}
+
+//C语言编程实现strlen 函数，不使用库函数
+int StringLen(char * a)
+{
+    int len = 0;
+    while (*a++ != '\0')
+    {
+        len++;
+    }
+    return len;
+}
+
+void 字符串长度()
+{
+    //char ch[] = "12345\06789";
+    char ch[] = "12345   6789";
+    int len = StringLen(ch);
+    printf("[%d]\n", len);
+    system("pause");
+}
+
+void 字符串长度字节大小()
+{
+    char s[50] = "abcdefghijklmnopqrstuvwxyz";
+    printf("%d", sizeof(s));
+    printf("%d", strlen(s));
+
+    char a1[] = { "hello" };
+    printf("%s\n", a1);
+    printf("%d\n", sizeof(a1));
+
+    char a2[3] = { 'a','b','\0' };
+    printf("%s\t%d\t%d", a2, sizeof(a2), strlen(a2));
+
+
+    char arr1[5] = "A";
+    char arr2[5] = { 'A','B','C','D','E' };
+    char arr3[5];
+    char arr4[] = "ABCDE";
+    //char arr5[5] = "ABCDE";
+    char arr6[5] = "ABCD";
+
+    printf("sizeof(arr1)=%d\n", sizeof(arr1));
+    printf("strlen(arr1)=%d\n", strlen(arr1));
+
+    printf("sizeof(arr2)=%d\n", sizeof(arr2));
+    printf("strlen(arr2)=%d\n", strlen(arr2));
+
+    printf("sizeof(arr3)=%d\n", sizeof(arr3));
+    printf("strlen(arr3)=%d\n", strlen(arr3));
+
+    printf("sizeof(arr4)=%d\n", sizeof(arr4));
+    printf("strlen(arr4)=%d\n", strlen(arr4));
+
+    //printf("sizeof(arr5)=%d\n", sizeof(arr5));
+    //printf("strlen(arr5)=%d\n", strlen(arr5));
+
+    printf("sizeof(arr6)=%d\n", sizeof(arr6));
+    printf("strlen(arr6)=%d\n", strlen(arr6));
+
+    system("pause");
+    getchar();
+}

@@ -1,3 +1,4 @@
+#define  _CRT_SECURE_NO_WARNINGS
 #include<stdio.h>
 #include<stdlib.h>
 #include<time.h>
@@ -254,8 +255,58 @@ void 强制类型转化4()
     printf("%d", (int)((int*)0 + 4));
 }
 
+void Digui(int a)
+{
+    printf("%d", a);
+    Digui(a);
+}
+
+void CharResvev(char *ch)
+{
+    if (ch[0] == '\0')
+    {
+        return;
+    }
+    CharResvev(ch + 1);
+    printf("%c", ch[0]);
+}
+void test04(int a)
+{
+    if (a == 1)
+    {
+        printf("1");
+        return;
+    }
+    if (a == 0)
+    {
+        return;
+    }
+    test04(a / 2);
+    printf("%d", a % 2);
+}
+
+void test05(char * ch)
+{
+    if (*ch == 0)
+        return;
+    test05(ch + 1);
+    printf("%c", *ch);
+}
+void test06(int a)
+{
+    if (a == 0)
+        return;
+    test06(a - 1);
+    printf("%d\n", a);
+}
+#define Opt(a,b) (a>b?a:b);
+
 void main()
 {
-    结构体内存分配();
+    int a = 10 * Opt(1, 2);
+    printf("%d\n", a);
+
+    Testencrypt2();
+
     system("pause");
 }

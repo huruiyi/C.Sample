@@ -133,7 +133,7 @@ void FreeSpace(node *head)
     }
     printf("销毁成功\n");
 }
-void main03()
+void main()
 {
     /*
     1：链表初始化
