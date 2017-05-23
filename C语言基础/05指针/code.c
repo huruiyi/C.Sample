@@ -320,10 +320,106 @@ void 字符串指针2()
     printf("  c3 = %c\n", c3);
 }
 
-void mainx()
+void Mprintf1(void * arr, int length)
 {
-    int result = 指针数组偏移();
+    for (int i = 0; i < length; i++)
+    {
+        printf("%d\n", *((int *)arr + i));
+    }
+}
 
+void 万能指针1()
+{
+    int   arr[] = { 1,2,3,4,5,6,7,8,9,10 };
+    void *  ch = arr;
+    Mprintf1(ch, 10);
+}
+
+void Mprintf2(void **arr, int length)
+{
+    for (int i = 0; i < length; i++)
+    {
+        printf("%s\n", *((int *)arr + i));
+    }
+}
+
+void 万能指针2()
+{
+    void* data0[] = { 111,222,333,444,555,666,777,888,999 };
+    for (int i = 0; i < 9; i++)
+    {
+        printf("%d\n", data0[i]);
+    }
+    //指针数组
+    void* data1[] = { "1","2","3","4","5","6" };
+    Mprintf2(data1, 6);
+    printf("\n");
+    char *p[] = { "abc","123","456","xyz" };
+    void **vp = p;
+    Mprintf2(vp, 4);
+}
+
+void 万能指针3()
+{
+    void* data[] = { 1,2,3,4,5,6,7,8,9 };
+    int a = data[0];
+    for (int i = 0; i < 9; i++)
+    {
+        printf("%d\t", data[i]);
+    }
+
+    printf("\n");
+    void **datap = data;
+    int datap0 = datap[0];
+    for (int i = 0; i < 9; i++)
+    {
+        printf("%d\t", datap[i]);
+    }
+}
+void main()
+{
+    void *p = (int *)malloc(sizeof(int) * 5);
+
+    //int *p0 = (int *)p + 0;
+    //int *p1 = (int *)p + 1;
+    //int *p2 = (int *)p + 2;
+    //int *p3 = (int *)p + 3;
+    //int *p4 = (int *)p + 4;
+
+    //* p0  = 11110 + 1;
+    //* p1  = 11111 + 1;
+    //* p2  = 11112 + 1;
+    //* p3  = 11113 + 1;
+    //* p4  = 11114 + 1;
+
+    //printf("%p\n", p);
+    //printf("%p\n", p0);
+    //printf("%p\n", p1);
+    //printf("%p\n", p2);
+    //printf("%p\n", p3);
+    //printf("%p\n", p4);
+
+    int * pp = p;
+    int *pp0 = pp + 0;
+    int *pp1 = pp + 1;
+    int *pp2 = pp + 2;
+    int *pp3 = pp + 3;
+    int *pp4 = pp + 4;
+
+    *pp0 = 111;
+    *pp1 = 222;
+    *pp2 = 333;
+    *pp3 = 444;
+    *pp4 = 555;
+    for (int i = 0; i < 5; i++)
+    {
+        printf("%d---%d\n", pp + i, *(pp + i));
+    }
+    if (p)
+    {
+        free(p);
+        printf("释放成功\n");
+    }
     //常量 栈区，可以修改
     system("pause");
 }

@@ -303,10 +303,10 @@ void test06(int a)
 
 void main()
 {
+    二维数组数据遍历();
+
     int a = 10 * Opt(1, 2);
     printf("%d\n", a);
-
-    Testencrypt2();
 
     system("pause");
 }

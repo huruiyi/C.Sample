@@ -133,7 +133,8 @@ void FreeSpace(node *head)
     }
     printf("销毁成功\n");
 }
-void main()
+
+void LinkListDemo()
 {
     /*
     1：链表初始化
@@ -144,7 +145,6 @@ void main()
     */
     node *nodehead = NULL;
     //1：链表初始化
-
     nodehead = CreateLinkNode();
 
     //2：链表遍历数据
@@ -186,5 +186,4 @@ void main()
     //5：链表销毁
     FreeSpace(nodehead);
     nodehead = NULL;
-    system("pause");
-};
+}

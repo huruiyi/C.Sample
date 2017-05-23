@@ -1,6 +1,15 @@
 #include<stdio.h>
 #include<stdlib.h>
 
+void 二维数组相关()
+{
+    int a[][4] = { 1,2,3,4,5,6,7,8,9,10,11,12 };
+    printf("%d，%d，%d\n", a, *a, &a);
+    printf("%d，%d，%d", a + 1, *a + 1, &a + 1);
+    //a :行指针
+    //*a 列指针
+    //&a+1 数组
+}
 void 二维数组数据遍历()
 {
     /*
@@ -27,7 +36,7 @@ void 二维数组数据遍历()
     {
         for (int j = 0; j < 3; j++)
         {
-            printf("%p	%p	%p	%d	%d	%d	%d\n", &arr[i][j], *(arr + i) + j, arr[i] + j, arr[i][j], *(*(arr + i) + j), *(arr[i]) + j, *(arr[i] + j));
+            printf("--%p--%p--%p--%d--%d--%d--%d\n", &arr[i][j], *(arr + i) + j, arr[i] + j, arr[i][j], *(*(arr + i) + j), *(arr[i]) + j, *(arr[i] + j));
         }
         printf("\n");
     }

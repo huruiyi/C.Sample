@@ -75,5 +75,8 @@
     <ClCompile Include="ifelse.c">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="求和.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

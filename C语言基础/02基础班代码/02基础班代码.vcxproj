@@ -130,6 +130,7 @@
     <ClCompile Include="字节大小.c" />
     <ClCompile Include="数组的逆置.c" />
     <ClCompile Include="极值.c" />
+    <ClCompile Include="求和.c" />
     <ClCompile Include="猜数字.c" />
     <ClCompile Include="运算符++.c" />
     <ClCompile Include="运算符，.c" />

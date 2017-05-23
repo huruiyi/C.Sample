@@ -77,6 +77,7 @@ void ZP2()
         printf("%s--%s\n", d.key, d.value);
     }
 }
+
 Dicts * dict;
 
 Dicts * Serach(char *key, int length)
@@ -93,6 +94,7 @@ Dicts * Serach(char *key, int length)
     }
     return d;
 }
+
 void ReadDic()
 {
     int length = GetDicLinesLength();
@@ -147,10 +149,4 @@ void ReadDic()
             printf("未查寻到结果\n");
         }
     }
-}
-
-void main()
-{
-    ReadDic();
-    system("pause");
 }
