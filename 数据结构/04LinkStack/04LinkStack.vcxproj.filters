@@ -15,19 +15,15 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="02动态链表.c">
+    <ClInclude Include="LinkStack.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="LinkStack.c">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="02动态链表2.c">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="03链表的基本操作.c">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="01静态链表1.c">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="main.c">
+    <ClCompile Include="test.c">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
