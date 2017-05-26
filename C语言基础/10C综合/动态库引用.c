@@ -25,7 +25,7 @@ void Testencrypt1()
     printf("%s\n", jdata);
 }
 
-typedef void *( * Func)(char *, int);
+typedef void *(*Func)(char *, int);
 void Testencrypt2()
 {
     HANDLE hDll; //声明一个dll实例文件句柄

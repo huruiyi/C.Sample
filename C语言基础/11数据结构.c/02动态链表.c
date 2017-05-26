@@ -10,7 +10,7 @@ typedef struct node
     struct node * next;
 } linknode;
 
-int main021(void)
+int  ¶¯Ì¬Á´±í(void)
 {
     linknode * node1 = (linknode *)malloc(sizeof(linknode));
     node1->name = (char *)malloc(sizeof(char) * 21);

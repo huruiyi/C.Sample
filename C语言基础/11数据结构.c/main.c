@@ -5,5 +5,6 @@
 
 void main(void)
 {
+    LinkListDemo();
     system("pause");
 }

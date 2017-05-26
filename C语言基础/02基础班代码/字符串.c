@@ -240,17 +240,12 @@ void 字符串()
     }
     printf("%d\n\n", j);
 
-    /*
-    a>b  返回1
-    a=b  返回0
-    a<b  返回-1
-    */
     char a[] = { "12345\06789" }; //12345789
     char b[] = { "123456789   " }; //123456789
-//char b[] = { "12345\06789" }; //12345789
-//char b[] = { "22345\06789" }; //12345789
+    //char b[] = { "12345\06789" }; //12345789
+    //char b[] = { "22345\06789" }; //12345789
 
-//char c[] = { 'a','b','\0','c' ,'\0'};
+    //char c[] = { 'a','b','\0','c' ,'\0'};
     printf("%s\n", a);
     //printf("%d\n", strlen(a));
 
@@ -301,7 +296,6 @@ void 字符串长度字节大小()
     char a2[3] = { 'a','b','\0' };
     printf("%s\t%d\t%d", a2, sizeof(a2), strlen(a2));
 
-
     char arr1[5] = "A";
     char arr2[5] = { 'A','B','C','D','E' };
     char arr3[5];
@@ -329,4 +323,64 @@ void 字符串长度字节大小()
 
     system("pause");
     getchar();
+}
+
+int CompareStr1(char ch1[], char ch2[])
+{
+    if (strlen(ch1) != strlen(ch2))
+    {
+        return 0;
+    }
+    for (int k = 0; k < strlen(ch1); k++)
+    {
+        if (ch1[k] != ch2[k])
+        {
+            return 0;
+        }
+    }
+    return 1;
+}
+
+int CompareStr2(char * s1, char * s2)
+{
+    if (strlen(s1) != strlen(s2))
+    {
+        return 0;
+    }
+    while (1)
+    {
+        //printf("%c-%c\n", *s1, *s2);
+        if (*s1++ != *s2++)
+        {
+            return 0;
+        }
+    }
+    return 1;
+    /*
+    char str1[] = { "hello" };
+    char str2[] = { "hexlo" };
+    int result = CompareStr2(str1, str2);
+    printf("%s %s %s\n", str1, result ? "等于" : "不等于", str2);
+    */
+}
+
+void 字符串连接()
+{
+    char c1[] = "hello";
+    char c2[] = "world";
+    char c3[100];
+    int i = 0;
+    int j = 0;
+    while (c1[i] != '\0')
+    {
+        c3[i] = c1[i];
+        i++;
+    }
+    do
+    {
+        c3[i + j] = c2[j];
+        j++;
+    } while (c1[i] == '\0');
+
+    printf("%s\n", c3);
 }

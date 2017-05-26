@@ -24,12 +24,6 @@
     <ClCompile Include="猜数字.c">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="关机程序.c">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="冒泡排序.c">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="二维数组行列.c">
       <Filter>源文件</Filter>
     </ClCompile>
@@ -39,22 +33,10 @@
     <ClCompile Include="数组的逆置.c">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="字符串比较.c">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="字节大小.c">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="极值.c">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="字符串相关.c">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="运算符++.c">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="运算符，.c">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="for嵌套.c">
@@ -63,19 +45,25 @@
     <ClCompile Include="修改const值.c">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="字符串连接.c">
+    <ClCompile Include="运算符.c">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="printf格式化输出相关.c">
+    <ClCompile Include="字符串.c">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="scanf格式化输入.c">
+    <ClCompile Include="printf.c">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="ifelse.c">
+    <ClCompile Include="scanf.c">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="求和.c">
+    <ClCompile Include="sort.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="sum.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="shutdown.c">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

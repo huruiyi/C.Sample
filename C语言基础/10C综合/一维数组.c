@@ -52,17 +52,17 @@ void 一维数组初打印(int *arr, int length)
 
 void 一级指针()
 {
-    int len = 1024*1024*10;
+    int len = 1024 * 1024 * 10;
     int *p = (int *)malloc(sizeof(int) * len);
     for (int i = 0; i < len; i++)
     {
         p[i] = 123 + i;
         //*(p + i) = 123 + i;
     }
-   /* for (int i = 0; i < len; i++)
-    {
-        printf("%d\n", p[i]);
-    }*/
+    /* for (int i = 0; i < len; i++)
+     {
+         printf("%d\n", p[i]);
+     }*/
     free(p);
 }
 void malloc2(int **p, int length)
