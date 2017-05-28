@@ -1,34 +1,41 @@
-#include<stdio.h>
-#include<stdlib.h>
-#include<string.h>
-
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
 #include "LinkStack.h"
 
-void main(void)
+typedef struct Persion
 {
-    LinkStack  list;
-    InitStack(&list);
-    int arr[15];
-    struct N {
-        Node node;
-        int s;
-    };
-    struct N n[15];
-    for (int i = 0; i < 15; i++)
-    {
-        n[i].s = 10 + i;
-        //printf("%d---%p\n", n[i].s, &n[i]);
-        Push(&list, &n[i]);
-    }
-    printf("stack size = %d\n", Size(&list));
+	Node node;
+	int age;
+	char name;
+}Persion;
 
-    while (Size(&list))
-    {
-        struct N * pdata = (struct N *)GetTop(&list);
-        printf("%d\n", pdata->s);
-        Pop(&list);
-    }
-    printf("stack size = %d\n", Size(&list));
+#if 1
+int main()
+{
+	Persion p[10];
+	LinkStack list;
+	InitStack(&list);
+	// Ñ¹Õ»
+	for (int i = 0; i < 10; i++)
+	{
+		p[i].age = i + 10;
+		p[i].name = 'a' + i;
+		Push(&list, &p[i].node);
+	}
+	printf("stack size = %d\n", Size(&list));
 
-    system("pause");
+	// ³öÕ»
+	while (Size(&list))
+	{
+		Persion* pt = (Persion*)GetTop(&list);
+		printf("name = %c, age = %d\n", pt->name, pt->age);
+		Pop(&list);
+	}
+	printf("stack size = %d\n", Size(&list));
+
+	system("pause");
+	return 0;
 }
+#endif

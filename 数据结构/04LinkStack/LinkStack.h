@@ -4,14 +4,14 @@
 // 链表节点的结构体
 typedef struct Node
 {
-    struct Node* next;
+	struct Node* next;
 }Node;
 
 // 管理链表的结构体
 typedef struct LinkStack
 {
-    int size;
-    Node* top;
+	Node* top;
+	int size;
 }LinkStack;
 
 // api
@@ -27,5 +27,6 @@ void Push(LinkStack* st, Node* node);
 void Pop(LinkStack* st);
 // 栈的大小
 int Size(LinkStack* st);
+
 
 #endif

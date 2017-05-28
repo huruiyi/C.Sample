@@ -12,25 +12,16 @@ typedef struct node
 
 void 静态链表1(void)
 {
-    linknode node1;
+    /*
+    inknode node1;
     strcpy(node1.name, "员工A");
     node1.scoure = 100;
-
-    linknode node2;
-    strcpy(node2.name, "员工B");
-    node2.scoure = 101;
-
-    linknode node3;
-    strcpy(node3.name, "员工C");
-    node3.scoure = 102;
-
-    linknode node4;
-    strcpy(node4.name, "员工D");
-    node4.scoure = 103;
-
-    linknode node5;
-    strcpy(node5.name, "员工E");
-    node5.scoure = 104;
+     **/
+    linknode node1 = { .name = "员工A",.scoure = 100 };
+    linknode node2 = { .name = "员工B",.scoure = 101 };
+    linknode node3 = { .name = "员工C",.scoure = 102 };
+    linknode node4 = { .name = "员工D",.scoure = 103 };
+    linknode node5 = { .name = "员工E",.scoure = 104 };
 
     node1.next = &node2;
     node2.next = &node3;
