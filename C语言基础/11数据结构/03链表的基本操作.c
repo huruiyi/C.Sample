@@ -150,23 +150,23 @@ void LinkListDemo()
     //2：链表遍历数据
     ForeachLinkNode(nodehead);
 
-    //3：链表插入数据
-    while (1)
-    {
-        int insertPlace = 0;
-        int insertVal = 0;
-        printf("\n请输入要插入的位置：");
-        scanf("%d", &insertPlace);
-        if (insertPlace == -2)
-        {
-            break;
-        }
-        printf("\n请输入要插入的值：");
-        scanf("%d", &insertVal);
-        InsertNode(nodehead, insertPlace, insertVal);
-        //2：链表遍历数据
-        ForeachLinkNode(nodehead);
-    }
+    ////3：链表插入数据
+    //while (1)
+    //{
+    //    int insertPlace = 0;
+    //    int insertVal = 0;
+    //    printf("\n请输入要插入的位置：");
+    //    scanf("%d", &insertPlace);
+    //    if (insertPlace == -2)
+    //    {
+    //        break;
+    //    }
+    //    printf("\n请输入要插入的值：");
+    //    scanf("%d", &insertVal);
+    //    InsertNode(nodehead, insertPlace, insertVal);
+    //    //2：链表遍历数据
+    //    ForeachLinkNode(nodehead);
+    //}
 
     // 4：插标删除数据
     while (1)

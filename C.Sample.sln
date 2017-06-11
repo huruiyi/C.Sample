@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26430.12
+VisualStudioVersion = 15.0.26430.13
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "C语言基础", "C语言基础", "{24DB2D30-4F29-462A-9C2E-E2A432C9C5D0}"
 EndProject
@@ -403,6 +403,7 @@ Global
 		{F806CFA1-D2F1-436C-8D83-99342649F2C5}.Release|x86.ActiveCfg = Release|Win32
 		{F806CFA1-D2F1-436C-8D83-99342649F2C5}.Release|x86.Build.0 = Release|Win32
 		{3627EF6A-B504-4122-9949-D448419F79C3}.Debug|Any CPU.ActiveCfg = Debug|Win32
+		{3627EF6A-B504-4122-9949-D448419F79C3}.Debug|Any CPU.Build.0 = Debug|Win32
 		{3627EF6A-B504-4122-9949-D448419F79C3}.Debug|ARM.ActiveCfg = Debug|Win32
 		{3627EF6A-B504-4122-9949-D448419F79C3}.Debug|x64.ActiveCfg = Debug|x64
 		{3627EF6A-B504-4122-9949-D448419F79C3}.Debug|x64.Build.0 = Debug|x64
@@ -415,6 +416,7 @@ Global
 		{3627EF6A-B504-4122-9949-D448419F79C3}.Release|x86.ActiveCfg = Release|Win32
 		{3627EF6A-B504-4122-9949-D448419F79C3}.Release|x86.Build.0 = Release|Win32
 		{06CD4D08-4725-4E34-84EB-AF52ED5FC6E0}.Debug|Any CPU.ActiveCfg = Debug|Win32
+		{06CD4D08-4725-4E34-84EB-AF52ED5FC6E0}.Debug|Any CPU.Build.0 = Debug|Win32
 		{06CD4D08-4725-4E34-84EB-AF52ED5FC6E0}.Debug|ARM.ActiveCfg = Debug|Win32
 		{06CD4D08-4725-4E34-84EB-AF52ED5FC6E0}.Debug|x64.ActiveCfg = Debug|x64
 		{06CD4D08-4725-4E34-84EB-AF52ED5FC6E0}.Debug|x64.Build.0 = Debug|x64
