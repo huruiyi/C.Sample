@@ -359,11 +359,19 @@ void 位运算()
 
 void main(int args, char * argv[])
 {
-    SelectSortDemo();
-    printf("\n参数个数%d\n", args);
-    for (size_t i = 0; i < args; i++)
+ 
+    //printf("\n参数个数%d\n", args);
+    //for (size_t i = 0; i < args; i++)
+    //{
+    //    printf("%s\n", argv[i]);
+    //}
+
+    HWND win = FindWindowA("Qt5QWindowIcon", "HydraViewer");//获取窗口
+    if (win)
     {
-        printf("%s\n", argv[i]);
+        SetWindowText(win, TEXT("23期C++ STL课程讲解"));
     }
+
+
     system("pause");
 }

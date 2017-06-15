@@ -153,14 +153,14 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 
         case IDB_ONE:
             //MessageBox(hwnd, L"您点击了第一个按钮。", L"提示", MB_OK |MB_ICONINFORMATION);
-            //SendMessage((HWND)lParam, WM_SETTEXT, (WPARAM)NULL, (LPARAM)L"第一个按鈕已点击");
+            //SendMessage((HWND)lParam, WM_SETTEXT, (WPARAM)NULL, (LPARAM)L"您点击了第一个按钮");
             break;
         case IDB_TWO:
-            SendMessage((HWND)lParam, WM_SETTEXT, (WPARAM)NULL, (LPARAM)L"第二个按鈕已点击");
+
             break;
         case IDB_THREE:
-            MessageBox(hWnd, L"您点击了第三个按钮。", L"提示", MB_OK | MB_ICONINFORMATION);
-            SendMessage((HWND)lParam, WM_SETTEXT, (WPARAM)NULL, (LPARAM)L"第三个按鈕已点击");
+            MessageBox(hWnd, L"点击了第三个按钮。", L"提示", MB_OK | MB_ICONINFORMATION);
+            SendMessage((HWND)lParam, WM_SETTEXT, (WPARAM)NULL, (LPARAM)L"点击了第三个按钮");
             break;
 
         default:
@@ -181,9 +181,10 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
         break;
     case WM_CREATE:
     {
-        CreateWindow(L"Button", L"按钮一", WS_VISIBLE | WS_CHILD | BS_GROUPBOX, 35, 10, 160, 60, hWnd, (HMENU)IDB_ONE, hInst, NULL);
-        CreateWindow(L"Button", L"按钮二", WS_VISIBLE | WS_CHILD | BS_PUSHBUTTON, 35, 80, 160, 60, hWnd, (HMENU)IDB_TWO, hInst, NULL);
-        CreateWindow(L"Button", L"按钮三", WS_VISIBLE | WS_CHILD | BS_PUSHBUTTON, 35, 150, 160, 60, hWnd, (HMENU)IDB_THREE, hInst, NULL);
+        CreateWindow(L"Button", L"GROUPBOX", WS_VISIBLE | WS_CHILD | BS_GROUPBOX, 35, 10, 140, 40, hWnd, (HMENU)IDB_ONE, hInst, NULL);
+        CreateWindow(L"Button", L"按钮二", WS_CHILD | WS_VISIBLE | BS_AUTORADIOBUTTON | WS_GROUP,  35, 60, 140, 40, hWnd, (HMENU)IDB_TWO, hInst, NULL);
+        CreateWindow(L"Button", L"按钮三", WS_VISIBLE | WS_CHILD | BS_PUSHBUTTON, 35, 110, 140, 40, hWnd, (HMENU)IDB_THREE, hInst, NULL);
+        CreateWindow(L"Button", L"按钮四", WS_VISIBLE | WS_CHILD | BS_PUSHBUTTON, 35, 160, 140, 40, hWnd, NULL, hInst, NULL);
     }
     default:
         return DefWindowProc(hWnd, message, wParam, lParam);

@@ -1,11 +1,17 @@
 #include<Windows.h>
 #include<WinUser.h>
 
+HINSTANCE hInstance;
 LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 {
     switch (message)
     {
-        //所有以XXXWindow的方法都不会进入到消息队列中，而是直接执行的
+    case WM_CREATE:
+    {
+        CreateWindow(L"Button", L"按钮si", WS_VISIBLE | WS_CHILD | BS_PUSHBUTTON, 35, 180, 180, 60, hWnd, NULL, hInstance, NULL);
+    }
+    break;
+    //所有以XXXWindow的方法都不会进入到消息队列中，而是直接执行的
     case WM_CLOSE://发送关闭的消息:WM_DESTROY
         DestroyWindow(hWnd);
         break;
@@ -22,6 +28,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
         wsprintf(chp, TEXT("X=%d,Y=%d"), x, y);
         MessageBox(hWnd, chp, TEXT("标题"), MB_OK);
     }
+    break;
     case WM_KEYDOWN:
     {
     }
@@ -43,13 +50,9 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 }
 
 // GetEnvironmentStrings();
-int WINAPI WinMain(
-    HINSTANCE hInstance,
-    HINSTANCE hPrevInstance,
-    LPSTR     lpCmdLine, //char * argv[]
-    int       nCmdShow   //显示命令最大化，最小化，正常
-)
+int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR     lpCmdLine, int       nCmdShow/*显示命令最大化，最小化，正常*/)
 {
+    hInstance = hInstance;
     /*
     //1：设计窗口
     //2：注册窗口
