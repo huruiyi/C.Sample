@@ -376,7 +376,7 @@ void 万能指针3()
         printf("%d\t", datap[i]);
     }
 }
-void main()
+void test()
 {
     void *p = (int *)malloc(sizeof(int) * 5);
 
@@ -421,5 +421,9 @@ void main()
         printf("释放成功\n");
     }
     //常量 栈区，可以修改
+}
+
+void main()
+{
     system("pause");
 }

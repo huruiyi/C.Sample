@@ -57,19 +57,14 @@ void fputs_demo1()
     会自动换行
     fputs:不会自动换行
 */
-void main()
-{
-    //puts_demo2();
-    fgets_demo2();
-    system("pause");
-}
-gets_demo2()
+
+void gets_demo2()
 {
     char buf[5] = { 0 };
     gets(buf);
     printf("[%s]", buf);
 }
-puts_demo2()
+void puts_demo2()
 {
     char che[11] = "hello world";//输出会异常，没有\0的位置
     printf("%d\n", sizeof(che));
@@ -92,7 +87,7 @@ puts_demo2()
     //printf("%d\n", strlen(ch));
     puts(ch);
 }
-fgets_demo2()
+void fgets_demo2()
 {
     //char str[10];
     //printf("str: ");
@@ -104,7 +99,7 @@ fgets_demo2()
     fgets(buf, 4, stdin);  //不安全
     printf("[%s]", buf);
 }
-fputs_demo2()
+void fputs_demo2()
 {
     char buf[5] = "1234";
     int a = 123;

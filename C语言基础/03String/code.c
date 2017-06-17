@@ -132,8 +132,42 @@ void Demo()
     } while (i <= 7);
     printf("x=%d, y=%d.\n", x, y);
 }
-void mainx()
+
+void test()
 {
+    char * p = "hello world";
+    printf("%p--%s\n", p, p);
+    p = "abcdefg";
+    printf("%p--%s\n", p, p);
+
+    char *p4[4];
+    p4[0] = "abc";
+    p4[1] = "123";
+    p4[2] = "def";
+    p4[3] = "456";
+
+    char str[] = "I love chia";
+    char * chp = "I love chia";
+}
+
+void testzifuchuan()
+{
+    char parr[] = "zifuchuanshuzu";
+    char charr[] = { 'z','i','f','u','c','h','u','a','n','s','h','u','z','u','\0' };
+    printf("%s\n", charr);
+    printf("%s\n", parr);
+}
+void zero()
+{
+    char str[50] = "notepad";
+    printf("%x", str);
+    printf("%c,%d", '\0', '\0'); //¿Õ×Ö·û£¬0
+    printf("%c,%d", 0, 0); //   ±àºÅÎª0µÄ×Ö·û,0,ÄÚ´æµÄÕûÊý0
+    printf("%c,%d", '0', '0');//×Ö·û0£¬×Ö·û0µÄ±àºÅ48
+}
+void main()
+{
+    zero();
     //char c[5] = { 'a', 'b', '\0', 'c', '\0' };
     //printf("%s\n", c);
 
