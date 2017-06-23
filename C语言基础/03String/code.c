@@ -165,6 +165,26 @@ void zero()
     printf("%c,%d", 0, 0); //   编号为0的字符,0,内存的整数0
     printf("%c,%d", '0', '0');//字符0，字符0的编号48
 }
+
+void chararrcharp()
+{
+    //		地址				值
+    //0x00CFF988	008b6858
+    //0x008B6858	“tasklist”
+    //p的地址：0x00CFF988  p的值实地址：008b6858
+    //通过地址0x008B6858  找到值 “tasklist”
+    //将“tasklist”的首地址(0x008B6858)作为值赋值给p
+    //将常量字符串的首地址赋值给p
+    char *p = "tasklist";
+    printf("%d,%d\n", sizeof(p), sizeof("tasklist"));
+    printf("%x \n", &p); //查看p的地址
+
+    //system(p); //本质上就是字符串的首地址
+
+    char arr[] = "hello world";
+    printf("%d,%d\n", sizeof(arr), sizeof("hello world"));
+    printf("%x\n", &arr); //查看p的地址
+}
 void main()
 {
     zero();
