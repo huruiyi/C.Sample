@@ -32,3 +32,9 @@ void 加号运算符()
     int b2 = ++i + ++i + ++i;
     printf("%d \n", b2);
 }
+
+void 加号运算符1()
+{
+	int a = 3;
+	printf("%d, %d, %d, %d", a, a++, a, a++);
+}

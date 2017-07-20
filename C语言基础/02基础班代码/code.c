@@ -360,6 +360,7 @@ void 位运算()
 void main(int args, char * argv[])
 {
  
+	加号运算符1();
     //printf("\n参数个数%d\n", args);
     //for (size_t i = 0; i < args; i++)
     //{
