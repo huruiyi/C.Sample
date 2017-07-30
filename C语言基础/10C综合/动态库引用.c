@@ -31,10 +31,14 @@ void Testencrypt2()
     HANDLE hDll; //声明一个dll实例文件句柄
     hDll = LoadLibrary("./encrypt/encryption.dll"); //导入动态链接库
 
-    Func   fun; //创建函数指针
-    fun = (Func)GetProcAddress(hDll, "InEncry"); //获取导入函数的函数指针
+    Func fun = (Func)GetProcAddress(hDll, "InEncry"); //获取导入函数的函数指针
 
-    char *data = "#pragma comment(lib,\".\encrypt\encryption.lib\")";
+    //char *data = "#pragma comment(lib,\".\encrypt\encryption.lib\")";
+    char *data = "pragma commentX";
     void *edata = fun(data, strlen(data));
     printf("%s\n", edata);
+
+    fun = (Func)GetProcAddress(hDll, "OutEncry"); //获取导入函数的函数指针
+    void *dedata = fun(edata, strlen(edata));
+    printf("%s\n", dedata);
 }

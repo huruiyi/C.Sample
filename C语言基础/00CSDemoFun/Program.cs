@@ -40,7 +40,6 @@ namespace _00CSDemoFun
 
         private unsafe static void Main(string[] args)
         {
-
             Person p1 = new Person("A", 10);
             Person p2 = new Person("B", 10);
             Person p3 = p1 + p2;
