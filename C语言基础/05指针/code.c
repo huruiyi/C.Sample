@@ -123,7 +123,8 @@ void mystrcat(char * dest, char * src)
         char c1[100] = "hello";
         char c2[] = "world";
         mystrcat(c1, c2);
-        printf("%s\n", c1);
+		printf("%s\n", c1);
+		printf("%s\n", c2);
     */
 }
 void 指针()
@@ -425,5 +426,11 @@ void test()
 
 void main()
 {
+	char c1[100] = "hello";
+	char c2[] = "world";
+
+	mystrcat(c1, c2);
+	printf("%s\n", c1);
+	printf("%s\n", c2);
     system("pause");
 }
