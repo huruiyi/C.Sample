@@ -357,20 +357,27 @@ void 位运算()
 	printf("[%d]\n", b);
 }
 
+void funx(const char * s1, char * s2)
+{
+	while ((*s2++ = *s1++));
+}
 void main(int args, char * argv[])
 {
-	加号运算符1();
+	char *s1 = "Hello World";
+	char *s2 = "";
+	funx(s1, s2);
+	printf("%s\n", s2);
 	//printf("\n参数个数%d\n", args);
 	//for (size_t i = 0; i < args; i++)
 	//{
 	//    printf("%s\n", argv[i]);
 	//}
 
-	HWND win = FindWindowA("Qt5QWindowIcon", "HydraViewer");//获取窗口
-	if (win)
-	{
-		SetWindowText(win, TEXT("23期C++ STL课程讲解"));
-	}
+	//HWND win = FindWindowA("Qt5QWindowIcon", "HydraViewer");//获取窗口
+	//if (win)
+	//{
+	//	SetWindowText(win, TEXT("23期C++ STL课程讲解"));
+	//}
 
 	system("pause");
 }
