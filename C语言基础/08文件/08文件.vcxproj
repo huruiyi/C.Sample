@@ -120,6 +120,7 @@
     <ClCompile Include="07stdin_stdout.cpp" />
     <ClCompile Include="08文件加密解密.c" />
     <ClCompile Include="09配置文件读取.c" />
+    <ClCompile Include="10文件加密解密.c" />
     <ClCompile Include="code.c" />
   </ItemGroup>
   <ItemGroup>

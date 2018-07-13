@@ -153,7 +153,7 @@ int main04()
     return EXIT_SUCCESS;
 }
 
-void main()
+void main05()
 {
     system("pause");
 }

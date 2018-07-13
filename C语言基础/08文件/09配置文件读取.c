@@ -90,6 +90,7 @@ char *ForeachValue(fi **f)
     {
         printf("%s£º%s\n", (*f)->lists[index].key, (*f)->lists[index].val);
     }
+	return 0;
 }
 
 char *SerachByKey(fi **f, char *key)
@@ -125,6 +126,7 @@ char *FreeSpace(fi **f)
     {
         free((*f)->fp);
     }
+	return 0;
 }
 
 void ConfigReadDemo()

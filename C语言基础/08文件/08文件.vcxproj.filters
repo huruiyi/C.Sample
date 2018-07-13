@@ -45,6 +45,9 @@
     <ClCompile Include="09配置文件读取.c">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="10文件加密解密.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="heaad.h">
